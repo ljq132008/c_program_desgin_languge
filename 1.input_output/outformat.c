@@ -21,6 +21,7 @@
  *  %s 输出字符串
  */
 #include <stdio.h>
+#include <unistd.h>
 
 void my_printf_format(){
     int a1=20, a2=345, a3=700, a4=22;
@@ -51,7 +52,14 @@ void my_scanf_test(){
     scanf("%d", &b);
     printf("a+b=%d\n", a+b);
 }
+
+void flush_io_buffer(){
+    printf("C语言中文网");
+    fflush(stdout);
+    sleep(5);
+    printf("http://www.baidu.com");
+}
 int main(){
-    my_scanf_test();
+    flush_io_buffer();
     return 0;
 }
